@@ -19,6 +19,10 @@
 @endsection
 
 @section('content')
+    @php
+        $currentUser = Sentinel::getUser();
+        $currentUserIsSuperadmin = $currentUser && $currentUser->withRoles()->where('slug', 'superadmin')->exists();
+    @endphp
 
     <div class="dashboard-ecommerce">
         <div class="container-fluid dashboard-content ">
@@ -136,6 +140,19 @@
                                                                 <ul class="dropdown-menu options-dropdown">
                                                                     @if(Sentinel::getUser()->hasAccess(['users_write']))
                                                                         @if(Sentinel::getUser()->id != $user->id)
+                                                                        @if($currentUserIsSuperadmin)
+                                                                        <li>
+                                                                            <a href="javascript:void(0)"
+                                                                               class="btn-list-button modal-menu"
+                                                                               data-title="{{ __('change_password') }}"
+                                                                               data-url="{{route('edit-info',['page_name'=>'change-user-password','param1'=>$user->id])}}"
+                                                                               data-toggle="modal"
+                                                                               data-target="#common-modal">
+                                                                                <i class="fa fa-key option-icon"></i>
+                                                                                {{ __('change_password') }}
+                                                                            </a>
+                                                                        </li>
+                                                                        @endif
                                                                         <li>
                                                                             <a href="javascript:void(0)"
                                                                                class="btn-list-button modal-menu"

@@ -218,4 +218,35 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', __('successfully_updated'));
     }
+
+    public function updateUserPassword(Request $request, $id)
+    {
+        if (strtolower(\Config::get('app.demo_mode')) == 'yes'):
+            return redirect()->back()->with('error', __('You are not allowed to add/modify in demo mode.'));
+        endif;
+
+        $currentUser = Sentinel::getUser();
+
+        if (!$currentUser || !$currentUser->withRoles()->where('slug', 'superadmin')->exists()) {
+            return redirect()->back()->with('error', __('please_check_again'));
+        }
+
+        if ((int) $currentUser->id === (int) $id || (int) $id === 1) {
+            return redirect()->back()->with('error', __('please_check_again'));
+        }
+
+        Validator::make($request->all(), [
+            'password'              => 'required|min:6|max:30',
+            'password_confirmation' => 'required|same:password|min:6|max:30',
+        ])->validate();
+
+        $user = User::findOrFail($id);
+
+        Sentinel::update($user, [
+            'password'        => $request->password,
+            'is_password_set' => 1,
+        ]);
+
+        return redirect()->back()->with('success', __('successfully_updated'));
+    }
 }

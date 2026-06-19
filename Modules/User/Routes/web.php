@@ -16,6 +16,7 @@ Route::group(
                 Route::post('/store', 'UserController@store')->name('user-store')->middleware('permissionCheck:users_write');
                 Route::post('/update/user-info/{id}', 'UserController@updateUserInfo')->name('update-user-info')->middleware('permissionCheck:users_write');
                 Route::post('/update/my-info/{id}', 'UserController@updateUserInfo')->name('update-my-info');
+                Route::post('/update/password/{id}', 'UserController@updateUserPassword')->name('update-user-password')->middleware('permissionCheck:users_write');
 
                 //role and permissions
                 Route::get('/roles', 'RolesPermissionsController@index')->name('roles')->middleware('permissionCheck:role_read');
